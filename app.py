@@ -41,6 +41,11 @@ def mostrar_datos():
         return render_template('base.html', datos=datos)
     except Exception as e:
         return f"Error: {e}"
+    
+# para rutas que no existen 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 # bloque de prueba 
 if __name__ == "__main__":
