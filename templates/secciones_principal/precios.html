@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h1 class="mb-4">Precios de los articulos de limpieza</h1>
+  <h1 class="mb-4">Listado de los articulos de limpieza</h1>
   {% for hoja in datos %}
   <!-- <h2>Hoja: {{ hoja['hoja'] }}</h2> -->
   <div class="card my-3">
@@ -8,14 +8,14 @@
         <thead class="thead-dark">
           <tr>
             <th class="bg-primary">{{ hoja['datos'][0][0] }}</th>
-            <th class="bg-primary">precio unidad</th>
+            <!-- <th class="bg-primary">precio unidad</th> -->
           </tr>
         </thead>
         <tbody>
           {% for row in hoja['datos'][1:] %}
           <tr class="{{ loop.cycle('odd', 'even') }}">
             <td>{{ row[0] }}</td>
-            <td>{{ row[1] }}</td>
+            <!-- <td>{{ row[1] }}</td> -->
           </tr>
           {% endfor %}
         </tbody>
